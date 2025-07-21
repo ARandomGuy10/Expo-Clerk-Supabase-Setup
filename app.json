@@ -1,8 +1,10 @@
 {
   "expo": {
-    "name": "Expo-Clerk-Supabase-Template",
-    "slug": "Expo-Clerk-Supabase-Template",
-    "version": "1.0.0",
+    "name": "Expo Clerk Supabase Starter",
+    "slug": "expo-clerk-supabase-starter",
+    "main": "expo-router/entry",
+    "scheme": "expoclrksupabase",
+    "version": "0.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -12,18 +14,44 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
+      "bundleIdentifier": "com.yourcompany.expoclrksupabase",
       "supportsTablet": true
     },
     "android": {
+      "package": "com.yourcompany.expoclrksupabase",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "expoclrksupabase",
+              "host": "oauth"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ],
       "edgeToEdgeEnabled": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "entryPoint": "./app/_layout",
+      "headers": {
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+        "Cross-Origin-Embedder-Policy": "require-corp"
+      }
+    },
+    "platforms": ["ios", "android", "web"],
+    "plugins": []
   }
 }
