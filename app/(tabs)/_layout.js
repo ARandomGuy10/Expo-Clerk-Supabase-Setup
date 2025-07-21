@@ -61,24 +61,6 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen 
-        name="transactions" 
-        options={{
-          title: 'Transactions',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="swap-horizontal-outline" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen 
-        name="reports" 
-        options={{
-          title: 'Reports',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="pie-chart-outline" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen 
         name="profile" 
         options={{
           title: 'Profile',
